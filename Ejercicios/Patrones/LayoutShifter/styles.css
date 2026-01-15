@@ -1,0 +1,53 @@
+/* Layout Shifter */
+.container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.columna1,
+.columna2,
+.columna3,
+.container-inner {
+  width: 100%;
+}
+
+.columna1 {
+  background-color: #ffcccc; /* Light red */
+  border: 1px solid #ff0000;
+}
+
+.columna2 {
+  background-color: #ccffcc; /* Light green */
+  border: 1px solid #008000;
+}
+
+.columna3 {
+  background-color: #ccccff; /* Light blue */
+  border: 1px solid #0000ff;
+}
+
+.container-inner {
+  background-color: #ffffcc; /* Light yellow */
+  border: 1px solid #ffd700;
+}
+
+@media (min-width: 600px) {
+  .columna1 {
+    width: 25%;
+    height: 100vh;
+  }
+
+  .container-inner {
+    width: 75%;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

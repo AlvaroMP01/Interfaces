@@ -1,0 +1,69 @@
+/* Mostly Fluid */
+.container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.columna1,
+.columna2,
+.columna3,
+.columna4,
+.columna5 {
+  width: 100%;
+}
+
+.columna1 {
+  background-color: #ffcccc; /* Light red */
+  border: 1px solid #ff0000;
+}
+
+.columna2 {
+  background-color: #ccffcc; /* Light green */
+  border: 1px solid #008000;
+}
+
+.columna3 {
+  background-color: #ccccff; /* Light blue */
+  border: 1px solid #0000ff;
+}
+
+.columna4 {
+  background-color: #ffffcc; /* Light yellow */
+  border: 1px solid #ffd700;
+}
+
+.columna5 {
+  background-color: #ffa500; /* Orange */
+  border: 1px solid #cc8400;
+}
+
+@media (min-width: 600px) {
+  .columna2,
+  .columna3,
+  .columna4,
+  .columna5 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .columna1 {
+    width: 60%;
+  }
+  .columna2 {
+    width: 40%;
+  }
+  .columna3,
+  .columna4,
+  .columna5 {
+    width: 33.3%;
+  }
+
+  .container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
