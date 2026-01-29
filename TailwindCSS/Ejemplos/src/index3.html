@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>03. Colores - Tailwind CSS</title>
+</head>
+<body>
+    <h1 class="bg-[#2E86AB] text-white">
+        Título con color personalizado directo
+    </h1>
+    <h1 class="bg-amber-600 text-white border-black border-2">
+        Bienvenido a Tailwind mediante CLI
+    </h1>
+    <h2 class="text-red-600">
+        Subtitulo
+    </h2>
+    <div class="text-green-500 bg-black">
+        <p>Este texto hereda el color verde</p>
+        <p>Este también</p>
+    </div>
+    <div class="[&>*]:bg-blue-500 [&>*]:p-4">
+        <p>Soy azul con padding</p>
+        <p>Yo también</p>
+    </div>
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    class="w-12 h-12 fill-[#1877f2]"
+>
+    <!-- Path del SVG -->
+    <path d="M20 3H4a1..."></path>
+</svg>
+</body>
+</html>

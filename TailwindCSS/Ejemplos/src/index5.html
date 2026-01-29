@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. Box Model y Layout</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <nav class="flex divide-x-10 divide-lime-500 divide-dotted">
+        <a href="#" class="bg-slate-800 px-8 py-4 block">Inicio</a>
+        <a href="#" class="bg-slate-800 px-8 py-4 block">Acerca de</a>
+        <a href="#" class="bg-slate-800 px-8 py-4 block">Contacto</a>
+        <a href="#" class="px-8 py-4 inline-block">Enlace inline-block</a>
+        <a href="#" class="px-8 py-4 block">Enlace block</a>
+    </nav>
+    <div class="text-center w-1/2 bg-amber-300">
+        <h1 class="text-5xl">Mitad de ancho</h1>
+    </div>
+
+    <div class="w-1/2 bg-amber-300">
+        <!-- La imagen ocupará el 100% del ancho de SU PADRE (el 50% de la pantalla) -->
+        <img src="./assets/landscape.png" class="w-full" alt="Paisaje">
+    </div>
+    <div class="h-4/5 bg-amber-300">
+        <!-- Esperas que ocupe el 80% de la pantalla -->
+        <p>Contenido con altura del 80% de la pantalla</p>
+    </div>
+    <div class="text-center w-md h-4/5 bg-amber-300">
+        <!-- Ahora sí ocupará el 80% de la altura de la pantalla (que hereda del body) -->
+        ... contenido ...
+    </div>
+    <div class="bg-blue-500 p-10">
+        <p class="bg-white">Contenido con padding de 40px alrededor</p>
+    </div>
+    <div class="w-1/2 mx-auto bg-amber-300">
+        <!-- Este div estará centrado horizontalmente -->
+        <p>Contenido centrado horizontalmente</p>
+    </div>
+    <div class="-mb-6">
+        <!-- Margen bottom negativo de -24px -->
+        <p>Contenido con margin bottom negativo</p>
+    </div>
+    <div class="border-4 border-blue-500 border-dashed">
+        Borde azul discontinuo
+    </div>
+</body>
+</html>
