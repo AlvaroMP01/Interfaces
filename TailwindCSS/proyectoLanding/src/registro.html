@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - TechnoTips</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white antialiased">
+    
+    <!-- Header -->
+    <header class="fixed inset-x-0 top-0 bg-black/80 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="landingPageTailwind.html" class="text-2xl font-bold hover:text-blue-400 transition-colors">
+                TechnoTips
+            </a>
+            
+            <a href="landingPageTailwind.html" class="text-gray-300 hover:text-white transition-colors">
+                ← Volver
+            </a>
+        </div>
+    </header>
+
+    <!-- Registration Form Section -->
+    <section class="min-h-screen pt-24 pb-12 px-4 sm:px-6 flex items-center justify-center">
+        <div class="container mx-auto max-w-2xl">
+            <div class="bg-gray-900/50 border border-gray-800 rounded-3xl p-8 md:p-12">
+                
+                <!-- Form Header -->
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+                        Inscríbete al Curso
+                    </h1>
+                    <p class="text-gray-400 md:text-lg">
+                        Completa el formulario para comenzar tu viaje en CSS
+                    </p>
+                </div>
+
+                <!-- Registration Form -->
+                <form class="space-y-6">
+                    
+                    <!-- Nombre Completo -->
+                    <div>
+                        <label for="nombre" class="label-field">
+                            Nombre Completo *
+                        </label>
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            name="nombre" 
+                            required
+                            class="input-field"
+                            placeholder="Tu nombre completo"
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="label-field">
+                            Correo Electrónico *
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            class="input-field"
+                            placeholder="tu@email.com"
+                        >
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div>
+                        <label for="telefono" class="label-field">
+                            Teléfono
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="telefono" 
+                            name="telefono"
+                            class="input-field"
+                            placeholder="+34 600 000 000"
+                        >
+                    </div>
+
+                    <!-- Nivel de Experiencia -->
+                    <div>
+                        <label for="nivel" class="label-field">
+                            Nivel de Experiencia en CSS *
+                        </label>
+                        <select 
+                            id="nivel" 
+                            name="nivel" 
+                            required
+                            class="input-field"
+                        >
+                            <option value="">Selecciona tu nivel</option>
+                            <option value="principiante">Principiante</option>
+                            <option value="intermedio">Intermedio</option>
+                            <option value="avanzado">Avanzado</option>
+                        </select>
+                    </div>
+
+                    <!-- Motivación -->
+                    <div>
+                        <label for="motivacion" class="label-field">
+                            ¿Por qué quieres aprender CSS?
+                        </label>
+                        <textarea 
+                            id="motivacion" 
+                            name="motivacion" 
+                            rows="4"
+                            class="input-field resize-none"
+                            placeholder="Cuéntanos tu motivación..."
+                        ></textarea>
+                    </div>
+
+                    <!-- Términos y Condiciones -->
+                    <div class="flex items-start gap-3">
+                        <input 
+                            type="checkbox" 
+                            id="terminos" 
+                            name="terminos" 
+                            required
+                            class="checkbox-field"
+                        >
+                        <label for="terminos" class="text-sm text-gray-400">
+                            Acepto los <a href="#" class="text-blue-400 hover:text-blue-300 underline">términos y condiciones</a> y la <a href="#" class="text-blue-400 hover:text-blue-300 underline">política de privacidad</a> *
+                        </label>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="flex items-start gap-3">
+                        <input 
+                            type="checkbox" 
+                            id="newsletter" 
+                            name="newsletter"
+                            class="checkbox-field"
+                        >
+                        <label for="newsletter" class="text-sm text-gray-400">
+                            Quiero recibir novedades y ofertas por correo electrónico
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button 
+                        type="submit"
+                        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-xl transition-all hover:scale-105 shadow-lg hover:shadow-blue-500/50 mt-8"
+                    >
+                        Completar Inscripción
+                    </button>
+
+                    <p class="text-center text-sm text-gray-500 mt-4">
+                        * Campos obligatorios
+                    </p>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-gray-500 text-sm">
+                © 2024 TechnoTips. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS desde cero - TechnoTips</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white antialiased">
+    
+    <!-- Header -->
+    <header class="fixed inset-x-0 top-0 bg-black/80 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">
+                TechnoTips
+            </h1>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#acerca" class="text-gray-300 hover:text-white transition-colors">
+                    Acerca de
+                </a>
+                <a href="registro.html" class="bg-blue-400 hover:bg-blue-500 text-white font-semibold px-6 py-2 rounded-xl transition-all hover:scale-105">
+                    Inicia el curso
+                </a>
+            </nav>
+            
+            <!-- Mobile Hamburger Menu -->
+            <button id="menuToggle" class="md:hidden flex flex-col gap-1.5 w-8 h-8 justify-center items-center group z-50" aria-label="Menu">
+                <span class="w-6 h-0.5 bg-white transition-colors group-hover:bg-blue-400"></span>
+                <span class="w-6 h-0.5 bg-white transition-colors group-hover:bg-blue-400"></span>
+                <span class="w-6 h-0.5 bg-white transition-colors group-hover:bg-blue-400"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Fullscreen Menu -->
+    <div id="fullscreenMenu" class="fixed inset-0 bg-black z-40 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <nav>
+            <ul class="space-y-8 text-center">
+                <li>
+                    <a href="#acerca" class="text-2xl sm:text-3xl text-gray-300 hover:text-white transition-colors">
+                        Acerca de
+                    </a>
+                </li>
+                <li>
+                    <a href="registro.html" class="inline-block bg-white hover:bg-gray-100 text-black font-bold text-2xl sm:text-3xl px-10 py-4 rounded-2xl transition-all hover:scale-105 shadow-lg">
+                        Inicia el curso
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 px-4 sm:px-6">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Hero Card with Image -->
+            <div class="relative rounded-3xl overflow-hidden bg-gray-900">
+                <!-- Background Image -->
+                <img 
+                    src="images/setup.png" 
+                    alt="Computer Setup" 
+                    class="w-full h-auto object-cover"
+                >
+                
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+                
+                <!-- Hero Content -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 py-12 md:py-16">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                        Domina CSS desde cero
+                    </h2>
+                    <p class="text-sm sm:text-base md:text-lg text-gray-200 max-w-xl md:max-w-2xl mx-auto mb-6 md:mb-8">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde qui iure in et placeat neque blanditiis doloribuis quaerat nostrum similique! Est possimus temporibus aliquam. Dolorum optio cupiditate velit totam!
+                    </p>
+                    <a href="registro.html" class="inline-block bg-white hover:bg-gray-200 text-black font-semibold px-8 py-3 md:px-10 md:py-4 rounded-xl md:text-lg transition-all hover:scale-105">
+                        Inscríbete ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lo Que Aprenderás Section -->
+    <section class="py-12 md:py-16 px-4 sm:px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">Lo Que Aprenderás</h2>
+            <p class="text-gray-400 mb-10 md:mb-12 md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                
+                <!-- Card 1 - Fundamentos de CSS -->
+                <div class="bg-gray-900/30 border border-gray-800/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Fundamentos de CSS</h3>
+                    <p class="text-gray-400 text-sm">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+
+                <!-- Card 2 - Técnicas Avanzadas -->
+                <div class="bg-gray-900/30 border border-gray-800/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Técnicas Avanzadas</h3>
+                    <p class="text-gray-400 text-sm">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+
+                <!-- Card 3 - Diseño Responsive -->
+                <div class="bg-gray-900/30 border border-gray-800/50 rounded-2xl p-8 hover:border-pink-500/50 transition-all">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Diseño Responsive</h3>
+                    <p class="text-gray-400 text-sm">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-8 mb-6 text-sm text-gray-400">
+                <a href="#" class="hover:text-blue-400 transition-colors">Contactanos</a>
+                <a href="#" class="hover:text-blue-400 transition-colors">Términos y condiciones</a>
+                <a href="#" class="hover:text-blue-400 transition-colors">Política de privacidad</a>
+            </div>
+            <p class="text-center text-gray-500 text-sm">
+                © 2024 Proyecto Landing. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu toggle functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const fullscreenMenu = document.getElementById('fullscreenMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            const isHidden = fullscreenMenu.classList.contains('opacity-0');
+            fullscreenMenu.classList.toggle('opacity-0', !isHidden);
+            fullscreenMenu.classList.toggle('opacity-100', isHidden);
+            fullscreenMenu.classList.toggle('pointer-events-none', !isHidden);
+            document.body.style.overflow = isHidden ? 'hidden' : 'auto';
+        });
+        
+        // Close menu when clicking on a link
+        fullscreenMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                fullscreenMenu.classList.add('opacity-0', 'pointer-events-none');
+                fullscreenMenu.classList.remove('opacity-100');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+
+</body>
+</html>
